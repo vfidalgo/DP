@@ -1,10 +1,8 @@
 # DP
 
 
-# Shodan Scanner
-
 ![Python version](https://img.shields.io/badge/python-3.9-blue)
-![License](https://img.shields.io/github/license/yourusername/shodan-scanner)
+![License](https://img.shields.io/github/license/vfidalgo/dp)
 
 Este proyecto es una herramienta para escanear en búsqueda de banners en Shodan, con el fin de identificar posibles vulnerabilidades en los sistemas encontrados.
 
