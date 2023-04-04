@@ -1,0 +1,33 @@
+<!doctype html>
+<html>
+    <head>
+        <title>Lista de activos encontrados</title>
+    </head>
+    <body>
+        <h1>Lista de activos encontrados</h1>
+        <table>
+            <thead>
+                <tr>
+                    <th>IP</th>
+                    <th>Hostname</th>
+                    <th>País</th>
+                    <th>Organización</th>
+                    <th>Productos</th>
+                    <th>Vulnerabilidades</th>
+                </tr>
+            </thead>
+            <tbody>
+                {% for activo in activos %}
+                <tr>
+                    <td>{{ activo.ip }}</td>
+                    <td>{{ activo.hostname }}</td>
+                    <td>{{ activo.pais }}</td>
+                    <td>{{ activo.organizacion }}</td>
+                    <td>{{ activo.productos }}</td>
+                    <td>{{ activo.vulnerabilidades }}</td>
+                </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+    </body>
+</html>
