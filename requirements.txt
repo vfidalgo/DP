@@ -3,3 +3,4 @@ requests==2.26.0
 Shodan==1.25.0
 Flask==2.0.2
 psycopg2-binary==2.9.1
+pymongo==4.0.1
