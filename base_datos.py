@@ -1,3 +1,4 @@
+from datetime import datetime
 import pymongo
 
 class BaseDatos:
@@ -13,3 +14,21 @@ class BaseDatos:
         # Si la ip no existe, se inserta en la base de datos
         else:
             self.ips.insert_one({"ip": ip, "banners": banners})
+
+    def insertar_activos(self, activos):
+        fecha_hora_actual = datetime.now()
+        activos_insertados = 0
+        
+        for activo in activos:
+            ip = activo["ip"]
+            banners = activo["banners"]
+            self.insertar_ip(ip, banners)
+            activos_insertados += 1
+            
+        print(f"{activos_insertados} activos insertados en la base de datos en {fecha_hora_actual}.")
+    
+    def obtener_activos(self):
+        activos = []
+        for activo in self.ips.find():
+            activos.append(activo)
+        return activos

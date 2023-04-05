@@ -9,7 +9,9 @@ def main():
 
     # Configuración del metabuscador
     mb = Metabuscador()
-
+    lista_activos = mb.buscar_activos('country:"ES"')
+    bd.insertar_activos(lista_activos)
+    
     # Configuración del generador de reportes
     rpt = Reporte()
 
